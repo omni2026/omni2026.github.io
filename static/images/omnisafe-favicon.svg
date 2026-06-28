@@ -1,0 +1,19 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OmniSafE icon">
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f6fb2"/>
+      <stop offset="1" stop-color="#172033"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="20" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6b5f"/>
+      <stop offset="1" stop-color="#f5bf45"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M32 10 49 17v13c0 12.2-6.9 20.5-17 24-10.1-3.5-17-11.8-17-24V17l17-7Z" fill="#fff" opacity="0.96"/>
+  <path d="M32 16 44 21v9.1c0 8.3-4.7 14.1-12 17-7.3-2.9-12-8.7-12-17V21l12-5Z" fill="url(#accent)"/>
+  <path d="M22 34c4.8-8.4 15.2-8.4 20 0" fill="none" stroke="#172033" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="24" cy="34" r="3" fill="#172033"/>
+  <circle cx="40" cy="34" r="3" fill="#172033"/>
+  <path d="M27 42h10" stroke="#172033" stroke-width="4" stroke-linecap="round"/>
+</svg>

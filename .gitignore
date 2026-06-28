@@ -1,0 +1,6 @@
+server.*.log
+.DS_Store
+.agents/
+.edge-profile-codex-check/
+ICSE_2027.pdf
+pdf_stream_textish.txt

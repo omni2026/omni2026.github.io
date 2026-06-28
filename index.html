@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners. -->
+  <meta name="description"
+    content="OmniSafE is an automated safety evaluation framework for embodied agents, with Omni-150 safety test cases, executable scenes, and assertion-based monitoring." />
+  <meta property="og:title" content="OmniSafE: Automated Safety Evaluation for Embodied Agents" />
+  <meta property="og:description"
+    content="Project page for OmniSafE, a framework for generating and executing embodied-agent safety tests with Omni-150 dataset samples." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/omni2026/OmniSafE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="pipeline2.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="OmniSafE: Automated Safety Evaluation for Embodied Agents">
+  <meta name="twitter:description"
+    content="OmniSafE generates executable safety test cases for embodied agents and demonstrates Omni-150 dataset samples.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="pipeline2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords"
+    content="OmniSafE, Omni-150, embodied agents, robot safety, automated safety evaluation, simulation, safety assertions, LLM agents">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>OmniSafE | Automated Safety Evaluation for Embodied Agents</title>
+  <link rel="icon" type="image/png" href="logo.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="logo.png?v=2">
+  <link rel="apple-touch-icon" href="logo.png?v=2">
+  <meta name="theme-color" content="#21466f">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/dataset-panel.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script defer src="static/js/dataset-panel.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              OmniSafE: Demystifying Automated Safety Evaluation for Embodied Agents</h1>
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous Authors</span>
+            </div> -->
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Anonymous Institution<br>
+              </span>
+              <span class="author-block venue-tag">Anonymous Submission</span>
+            </div> -->
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper link: keep disabled for double-blind review unless the linked file is anonymized. -->
+                <!-- <span class="link-block">
+              <a href="#"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper Hidden</span>
+              </a>
+            </span> -->
+
+                <!-- Supplement link: replace with an anonymized PDF if needed. -->
+                <!-- <span class="link-block">
+                <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplement</span>
+                </a>
+              </span> -->
+
+                <!-- Code link. -->
+                <span class="link-block">
+                  <a href="https://github.com/omni2026/OmniSafE" target="_blank" rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/omni2026/Omni-dataset" target="_blank" rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section hero is-light" id="overview">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 section-heading">
+            Overview</h2>
+        </div>
+      </div>
+      <div class="overview-panel">
+        <div class="overview-figure">
+          <img src="pipeline2.png" alt="OmniSafE automated safety evaluation pipeline" />
+        </div>
+        <div class="overview-content">
+          <p>
+            <b>OmniSafE</b> is a practical end-to-end framework for automatically evaluating the safety of
+            LLM-based embodied agents. Given an off-the-shelf embodied agent, OmniSafE constructs executable
+            safety test cases, adapts the agent to simulation, translates its actions into robot-control
+            commands, and detects safety violations during task execution.
+          </p>
+          <p>
+            The framework combines an agentic pipeline for scene generation with a lightweight action compilation
+            mechanism. A multi-agent collaborative system builds diverse, simulation-ready safety scenes at scale,
+            while the compiler grounds heterogeneous agent outputs into a unified execution interface. This enables
+            plug-and-play testing across different embodied agent architectures and reveals safety failures across
+            the full decision-to-execution pipeline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero" id="dataset-samples">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 section-heading">
+            OmniSafE Dataset Samples</h2>
+          <p class="dataset-section-subtitle">
+            Omni-150 is a collection of automatically generated safety test cases produced by OmniSafE
+            during embodied-agent evaluation. Each sample links one hazard category to a concrete
+            instruction, an executable simulation scene, and safety assertions. The complete dataset is
+            available at <a href="https://github.com/omni2026/Omni-dataset" target="_blank"
+              rel="noopener noreferrer">omni2026/Omni-dataset</a>.
+          </p>
+        </div>
+      </div>
+
+      <div id="dataset-panel-root"></div>
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="scene-generation">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <span class="section-kicker">Agentic Pipeline</span>
+          <h2 class="title is-2 section-heading">Agentic Scene Generation Pipeline</h2>
+          <p class="section-lead">
+            OmniSafE automatically turns a safety-oriented instruction into an executable simulation scene through
+            a multi-agent collaborative system. This is the generative engine behind the Omni-150 shown below.
+          </p>
+        </div>
+      </div>
+
+      <figure class="scene-gen-showcase">
+        <div class="scene-gen-figure-wrap">
+          <img src="scene_gen.png" alt="OmniSafE agentic scene generation pipeline" />
+        </div>
+        <figcaption>
+          From an input instruction, the agentic pipeline progressively builds the scene through blueprint planning,
+          asset retrieval, physically plausible placement, and final review.
+        </figcaption>
+      </figure>
+
+      <div class="scene-gen-takeaways" aria-label="Scene generation takeaways">
+        <article>
+          <span>Blueprint Agent</span>
+          <p>Interprets the task intent and sketches the required room type, zones, and coarse spatial layout.</p>
+        </article>
+        <article>
+          <span>Retrieval + Placement Agents</span>
+          <p>Retrieve suitable 3D assets and instantiate them with commonsense and physical constraints.</p>
+        </article>
+        <article>
+          <span>Review Agent</span>
+          <p>Checks whether the generated scene faithfully supports the intended hazard and execution requirements.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section hero is-light" id="highlights">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 section-heading">Highlights</h2>
+          <p class="section-lead">
+            OmniSafE turns safety evaluation from a hand-written checklist into a reproducible, executable test
+            pipeline for embodied agents.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-index">01</span>
+          <h3>Taxonomy-grounded hazards</h3>
+          <p>
+            We organize household safety risks into a structured hazard taxonomy, so each evaluation sample has a
+            clear safety intent instead of being an isolated scenario.
+          </p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-index">02</span>
+          <h3>Executable scene generation</h3>
+          <p>
+            OmniSafE generates simulation-ready 3D scenes that instantiate each hazard with concrete objects,
+            layouts, and unsafe preconditions.
+          </p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-index">03</span>
+          <h3>Instruction + assertion pairs</h3>
+          <p>
+            Each test case couples a natural-language task instruction with evaluator-facing safety assertions,
+            including LTL-style monitors when temporal constraints are needed.
+          </p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-index">04</span>
+          <h3>Agent-agnostic evaluation</h3>
+          <p>
+            A lightweight action bridge grounds heterogeneous embodied-agent outputs into executable robot-control
+            commands, enabling plug-and-play testing.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="section hero" id="motivation">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 section-heading">Motivation</h2>
+          <p class="section-lead">
+            Modern embodied agents can plan over long horizons, but safety failures often emerge only after their
+            language-level decisions are grounded into physical interaction.
+          </p>
+        </div>
+      </div>
+
+      <div class="challenge-solution-grid">
+        <article class="narrative-card">
+          <h3>Why safety evaluation is hard</h3>
+          <ul>
+            <li>Unsafe behavior depends on the relationship between instruction, scene context, object state, and time.</li>
+            <li>Manually designing diverse, executable safety cases is slow and difficult to scale.</li>
+            <li>Different embodied agents expose different action spaces, making fair evaluation cumbersome.</li>
+          </ul>
+        </article>
+        <article class="narrative-card narrative-card-accent">
+          <h3>What OmniSafE provides</h3>
+          <ul>
+            <li>Automatic generation of hazard-conditioned test cases with aligned instructions, scenes, and assertions.</li>
+            <li>Simulation-ready environments that make safety risks observable during execution.</li>
+            <li>A unified evaluation interface for measuring violations across different embodied-agent pipelines.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="section hero is-light" id="framework">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2 section-heading">Framework</h2>
+          <p class="section-lead">
+            The pipeline follows the same structure shown in the Omni-150 samples: select a hazard, instantiate an
+            executable scene, issue an embodied-agent instruction, and monitor safety assertions during execution.
+          </p>
+        </div>
+      </div>
+
+      <div class="method-grid">
+        <article class="method-step-card">
+          <span class="method-step">Step 1</span>
+          <h3>Hazard-conditioned generation</h3>
+          <p>Role-specialized generation agents expand taxonomy entries into diverse household safety tasks.</p>
+        </article>
+        <article class="method-step-card">
+          <span class="method-step">Step 2</span>
+          <h3>Scene synthesis</h3>
+          <p>Each generated case is grounded into an executable 3D scene with relevant objects and unsafe affordances.</p>
+        </article>
+        <article class="method-step-card">
+          <span class="method-step">Step 3</span>
+          <h3>Agent execution bridge</h3>
+          <p>OmniSafE adapts an embodied agent's high-level outputs into the simulator action interface.</p>
+        </article>
+        <article class="method-step-card">
+          <span class="method-step">Step 4</span>
+          <h3>Assertion monitoring</h3>
+          <p>Safety monitors detect whether execution violates hazard-specific constraints over time.</p>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!--BibTeX citation -->
+  <!-- <section class="section hero" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @inproceedings{omnisafe2026,
+          title={OmniSafE: Demystifying Automated Safety Evaluation for Embodied Agents},
+          author={Anonymous Authors},
+          booktitle={Anonymous Conference},
+          year={2026}
+        }        
+      </code></pre>
+    </div>
+  </section> -->
+  <!--End BibTeX citation -->
+
+  <section class="section hero" id="evaluation-results">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <span class="section-kicker">Evaluation</span>
+          <h2 class="title is-2 section-heading">Safety Evaluation of Embodied Agents</h2>
+          <p class="section-lead">
+            We use OmniSafE to conduct automated end-to-end safety evaluation across representative LLM-based
+            embodied agents. The results reveal failures that only emerge after high-level decisions are grounded into
+            executable robot actions.
+          </p>
+        </div>
+      </div>
+
+      <div class="main-results-card">
+        <div class="result-card-heading">
+          <div>
+            <span class="result-kicker">Main Results</span>
+            <h3>End-to-end safety evaluation</h3>
+          </div>
+          <p>
+            Metrics follow the paper: task-success metrics are reported alongside diagnosis metrics that separate
+            hazard recognition, refusal behavior, unsafe proceeding, and unsafe execution.
+          </p>
+        </div>
+
+        <div class="evaluation-stat-strip" aria-label="Evaluation summary">
+          <article>
+            <span>21.36%</span>
+            <p>Average serious safety violation rate across evaluated task executions.</p>
+          </article>
+          <article>
+            <span>670+</span>
+            <p>Concrete unsafe execution cases surfaced by OmniSafE for failure diagnosis.</p>
+          </article>
+        </div>
+
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th colspan="2">Agent under Test</th>
+                <th colspan="2">E2E Metrics</th>
+                <th colspan="4">Diagnosis Metrics</th>
+              </tr>
+              <tr>
+                <th>Agent</th>
+                <th>Model</th>
+                <th>TSR &darr;</th>
+                <th>UR &darr;</th>
+                <th>HRR &uarr;</th>
+                <th>RR &uarr;</th>
+                <th>UPR &darr;</th>
+                <th>UER &darr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3">LLM-Planner</td>
+                <td>GPT-5.5</td>
+                <td>15.79</td>
+                <td class="metric-warn">39.39</td>
+                <td>10.77</td>
+                <td>29.00</td>
+                <td class="metric-warn">93.33</td>
+                <td>9.09</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>17.65</td>
+                <td class="metric-warn">37.50</td>
+                <td>4.00</td>
+                <td>20.20</td>
+                <td class="metric-warn">84.75</td>
+                <td>20.00</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>22.22</td>
+                <td>19.35</td>
+                <td>2.94</td>
+                <td>36.84</td>
+                <td>60.00</td>
+                <td>14.28</td>
+              </tr>
+              <tr>
+                <td rowspan="3">RoboAgent</td>
+                <td>GPT-5.5</td>
+                <td>0.00</td>
+                <td>10.71</td>
+                <td>12.73</td>
+                <td class="metric-good">57.73</td>
+                <td>20.29</td>
+                <td>11.11</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>3.57</td>
+                <td>7.50</td>
+                <td>0.00</td>
+                <td class="metric-good">66.30</td>
+                <td>27.10</td>
+                <td class="metric-good">0.00</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>0.00</td>
+                <td>6.67</td>
+                <td>0.00</td>
+                <td>38.64</td>
+                <td>47.37</td>
+                <td class="metric-good">0.00</td>
+              </tr>
+              <tr>
+                <td rowspan="3">Code-as-Policies</td>
+                <td>GPT-5.5</td>
+                <td>13.79</td>
+                <td>27.59</td>
+                <td>41.82</td>
+                <td>32.00</td>
+                <td class="metric-warn">82.76</td>
+                <td class="metric-warn">80.00</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>13.64</td>
+                <td class="metric-warn">32.26</td>
+                <td>20.51</td>
+                <td>23.21</td>
+                <td class="metric-warn">93.10</td>
+                <td class="metric-warn">50.00</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>16.70</td>
+                <td>24.67</td>
+                <td>12.00</td>
+                <td>12.67</td>
+                <td class="metric-warn">76.70</td>
+                <td class="metric-good">0.00</td>
+              </tr>
+              <tr>
+                <td rowspan="3">ELLMER</td>
+                <td>GPT-5.5</td>
+                <td>7.69</td>
+                <td>14.28</td>
+                <td class="metric-good">73.90</td>
+                <td>41.17</td>
+                <td>9.09</td>
+                <td class="metric-good">0.00</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>5.56</td>
+                <td class="metric-warn">31.91</td>
+                <td>32.50</td>
+                <td>12.90</td>
+                <td class="metric-warn">97.14</td>
+                <td class="metric-good">0.00</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>0.00</td>
+                <td>15.00</td>
+                <td>36.84</td>
+                <td>35.00</td>
+                <td class="metric-warn">83.33</td>
+                <td>16.67</td>
+              </tr>
+              <tr>
+                <td rowspan="3">CodeBotler</td>
+                <td>GPT-5.5</td>
+                <td>9.10</td>
+                <td>29.30</td>
+                <td>48.60</td>
+                <td class="metric-good">54.50</td>
+                <td class="metric-warn">89.70</td>
+                <td class="metric-warn">71.40</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>3.80</td>
+                <td>11.10</td>
+                <td>8.08</td>
+                <td class="metric-good">78.67</td>
+                <td class="metric-warn">95.00</td>
+                <td class="metric-warn">66.60</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>16.70</td>
+                <td>4.08</td>
+                <td>0.00</td>
+                <td class="metric-good">92.00</td>
+                <td>21.73</td>
+                <td>20.00</td>
+              </tr>
+              <tr>
+                <td rowspan="3">ISR-LLM</td>
+                <td>GPT-5.5</td>
+                <td>16.67</td>
+                <td>24.14</td>
+                <td>0.00</td>
+                <td>22.22</td>
+                <td class="metric-warn">95.65</td>
+                <td class="metric-warn">33.33</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>18.18</td>
+                <td class="metric-warn">32.00</td>
+                <td>0.00</td>
+                <td>36.90</td>
+                <td>64.71</td>
+                <td>28.57</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>8.00</td>
+                <td>25.80</td>
+                <td>0.00</td>
+                <td>12.50</td>
+                <td class="metric-warn">100.00</td>
+                <td class="metric-good">0.00</td>
+              </tr>
+              <tr>
+                <td rowspan="3">LLM-BT</td>
+                <td>GPT-5.5</td>
+                <td>8.96</td>
+                <td class="metric-warn">35.60</td>
+                <td>32.18</td>
+                <td>37.37</td>
+                <td class="metric-warn">88.46</td>
+                <td>21.05</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V4-Pro</td>
+                <td>2.30</td>
+                <td>11.46</td>
+                <td>3.13</td>
+                <td>0.00</td>
+                <td class="metric-warn">33.33</td>
+                <td>7.81</td>
+              </tr>
+              <tr>
+                <td>GLM-5.2</td>
+                <td>3.57</td>
+                <td>8.33</td>
+                <td>1.04</td>
+                <td>32.00</td>
+                <td class="metric-warn">84.38</td>
+                <td>20.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">
+          TSR: Task Success Rate; UR: Unsafe Rate; HRR: Hazard Recognition Rate; RR: Refusal Rate; UPR:
+          Unsafe-Proceed Rate; UER: Unsafe Execution Rate. Arrows indicate the safer direction.
+        </p>
+      </div>
+
+      <div class="findings-grid paper-findings-grid">
+        <article class="finding-card">
+          <span class="finding-label">Finding with OMNISAFE</span>
+          <h3>No evaluated agent achieves reliable end-to-end safety on the hazardous task suite.</h3>
+          <p>
+            Across the hazardous task suite, every evaluated embodied agent still exhibits safety failures under
+            OmniSafE's end-to-end evaluation.
+          </p>
+        </article>
+        <article class="finding-card">
+          <span class="finding-label">Finding with OMNISAFE</span>
+          <h3>Embodied agent safety is jointly determined by both the planning architecture and the backbone LLM.</h3>
+          <p>
+            Changing the LLM alone does not fully determine safety; the embodied-agent architecture also shapes how
+            hazards are recognized, refused, or executed.
+          </p>
+        </article>
+        <article class="finding-card">
+          <span class="finding-label">Finding with OMNISAFE</span>
+          <h3>Execution-level safety failures are decoupled from planning-level failures.</h3>
+          <p>
+            Agents may appear safe at the planning stage yet still fail after grounding into physical actions, showing
+            the need for execution-level evaluation.
+          </p>
+        </article>
+      </div>
+
+      <div class="demo-video-section">
+        <div class="result-card-heading">
+          <div>
+            <span class="result-kicker">Execution Demos</span>
+            <h3>Representative safety evaluation traces</h3>
+          </div>
+          <p>
+            Demo videos show how unsafe instructions are instantiated, executed, and monitored in simulation.
+          </p>
+        </div>
+
+        <div class="demo-video-grid">
+          <article class="demo-video-card">
+            <video controls muted playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+            <div class="demo-video-copy">
+              <span>Demo 1</span>
+              <h4>Unsafe task execution</h4>
+              <p>An embodied agent follows a task instruction while OmniSafE monitors safety predicates.</p>
+            </div>
+          </article>
+          <article class="demo-video-card">
+            <video controls muted playsinline preload="metadata">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+            <div class="demo-video-copy">
+              <span>Demo 2</span>
+              <h4>Assertion-based detection</h4>
+              <p>Safety assertions detect hazardous states during the decision-to-execution process.</p>
+            </div>
+          </article>
+          <article class="demo-video-card">
+            <video controls muted playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+            <div class="demo-video-copy">
+              <span>Demo 3</span>
+              <h4>Failure diagnosis</h4>
+              <p>Execution traces help attribute safety failures to planning, grounding, or physical interaction.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page presents <b>OmniSafE</b> and the Omni-150 dataset samples. The page structure is adapted from
+              the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank"
+                rel="noopener noreferrer">Academic Project Page Template</a> and the
+              <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page.
+
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
