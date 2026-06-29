@@ -332,6 +332,13 @@
   margin-top: 0.75rem;
 }
 
+.task-scene-compression-note {
+  color: #6b7280 !important;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-top: 0.35rem;
+}
+
 .progress-bar {
   background: #e2e8f0;
   border-radius: 2px;

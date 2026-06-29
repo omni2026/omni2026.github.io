@@ -968,7 +968,7 @@
                 )
                 : h("div", { className: "model-placeholder" }, "Processed GLB sample unavailable")
             ),
-            h("p", { className: "task-scene-text" }, "Simulation-ready scene generated for this OmniSafE-150 safety test case.")
+            h("p", { className: "task-scene-compression-note" }, "For web preview, scene are compressed with Draco and WebP textures capped at 512 px.")
           )
         )
       )
