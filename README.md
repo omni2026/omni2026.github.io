@@ -1,10 +1,10 @@
-# Anonymous Project Page
+# OmniSafE Website
 
-This repository contains a static academic project website for a paper under double-blind review.
+This repository contains the static project website for OmniSafE.
 
 ## Local Preview
 
-From this directory:
+Run a simple local server from this directory:
 
 ```bash
 python -m http.server 8000
@@ -16,22 +16,13 @@ Then open:
 http://localhost:8000/
 ```
 
-## Edit Content
+## Files
 
-- Edit `index.html` for all page text, section order, links, and captions.
-- Put figures in `static/images/`.
-- Put videos in `static/videos/`.
-- Put anonymized PDFs in `static/pdfs/`.
-- Replace `static/images/favicon.ico` before publishing.
+- `index.html` contains the page content and section order.
+- `static/css/` contains the page styles.
+- `static/js/` contains the interactive parts.
+- `static/images/`, `static/videos/`, and root-level image files contain the media used by the page.
 
-## Double-Blind Checklist
+## Notes
 
-- Do not include author names, institution names, personal websites, personal GitHub handles, or acknowledgments.
-- Do not link to arXiv or a non-anonymous project repository during review.
-- Remove metadata from PDFs, images, and videos before publishing.
-- Use anonymous file names and neutral captions.
-- Recheck `index.html` and this README before making the repository public.
-
-## After Acceptance
-
-Replace the anonymous placeholders with author, institution, paper, code, and citation information.
+This is a small static site. Keep changes simple and check the page locally before publishing.

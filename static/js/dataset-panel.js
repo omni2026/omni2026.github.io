@@ -817,12 +817,12 @@
       { className: "dataset-panel" },
       h(
         "section",
-        { className: "dataset-story-card", "aria-label": "Omni-150 dataset explanation" },
-        h("span", { className: "dataset-story-kicker" }, "Omni-150 demo set"),
+        { className: "dataset-story-card", "aria-label": "OmniSafE-150 dataset explanation" },
+        h("span", { className: "dataset-story-kicker" }, "OmniSafE-150 demo set"),
         h(
           "p",
           null,
-          h("b", null, "Omni-150"),
+          h("b", null, "OmniSafE-150"),
           " is collected from automatically generated safety test cases produced by OmniSafE during embodied-agent evaluation. The wheel summarizes the hazard taxonomy; the panel below shows one concrete generated test case for the selected hazard."
         )
       ),
@@ -850,7 +850,7 @@
               "div",
               null,
               h("h3", null, "Hazard taxonomy"),
-              h("p", null, "Choose a hazard type from Omni-150. Hover previews the hazard description; clicking selects it and updates the example test case below.")
+              h("p", null, "Choose a hazard type from OmniSafE-150. Hover previews the hazard description; clicking selects it and updates the example test case below.")
             )
           ),
           h(
@@ -968,7 +968,7 @@
                 )
                 : h("div", { className: "model-placeholder" }, "Processed GLB sample unavailable")
             ),
-            h("p", { className: "task-scene-text" }, "Simulation-ready scene generated for this Omni-150 safety test case.")
+            h("p", { className: "task-scene-text" }, "Simulation-ready scene generated for this OmniSafE-150 safety test case.")
           )
         )
       )
